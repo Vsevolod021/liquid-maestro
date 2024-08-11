@@ -1,0 +1,359 @@
+.home-page 
+  background: $black
+  .intro
+    height: 874px
+    .section__content 
+      padding-top: 35px
+    &__background
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      overflow: hidden 
+      img        
+        display: block
+        object-position: 63% 100%
+        object-fit: cover
+        width: 100%
+        height: 100%
+    &__header
+      display: flex
+      justify-content: space-between
+      align-items: flex-start
+      button
+        display: block
+        background: none 
+        border: none 
+        cursor: pointer
+        img 
+          position: relative
+          width: 100%
+          height: 100%
+      &-logo 
+        width: 117px
+        height: 106px
+      &-menu-burger
+        width: 30px
+        height: 16px
+    &__text
+      position: relative
+      padding-left: 198px
+      padding-top: 167px
+      &-pretitle
+        font-family: "Montserrat"
+        font-size: 16px
+        font-weight: 600
+        line-height: 19.5px
+        text-align: left
+        color: $white
+      &-title
+        font-size: 102px
+        font-weight: 700
+        line-height: 106.59px
+        text-align: left
+        color: $white
+      &-subtitle
+        margin-top: 24px
+        font-size: 20px
+        font-weight: 500
+        line-height: 27.7px
+        letter-spacing: 0.02em
+        text-align: left
+        color: $white
+    &__button 
+      display: block
+      position: absolute
+      left: 50%
+      bottom: 100px
+      transform: translateX(-50%)
+    &__img 
+      @at-root .intro img 
+        display: block
+        position: absolute
+      &-note 
+        top: 242px
+        left: 602px
+      &-line 
+        top: 0
+        left: 0
+        width: 100%
+        height: auto
+      &-bar-spoon
+        left: 50%
+        bottom: 0
+        transform: translate(-50%, 50%)
+        
+  .about
+    .section__content
+      padding-top: 345px
+      padding-bottom: 204px
+    &__img
+      @at-root .about img 
+        display: block
+        position: absolute
+      &-letter 
+        bottom: 0
+        left: 0
+        height: 821px
+        width: 508px
+      &-cocktail 
+        top: 78px
+        left: 50%
+        transform: translateX(-50%)
+    &__text 
+      padding: 0 188px
+      position: relative
+      &-main, &-main u 
+        font-size: 36px
+        font-weight: 500
+        line-height: 49.86px
+        letter-spacing: 0.02em
+        text-align: left
+        color: $white
+        u 
+          text-decoration: underline
+      &-additional
+        margin-top: 55px
+        font-family: "Montserrat"
+        font-size: 18px
+        font-weight: 400
+        line-height: 27px
+        letter-spacing: -0.02em
+        text-align: left
+        color: $white
+
+  .hours 
+    .section__content
+      padding-top: 137px
+      padding-bottom: 222px
+    &__photos
+      display: flex
+      justify-content: space-between
+      img 
+        display: block
+        width: 50%
+        height: auto
+    &__img
+      &-letter 
+        display: block
+        position: absolute
+        top: 167px
+        right: 0
+    &__title, 
+    &__title>span
+      font-size: 36px
+      font-weight: 700
+      line-height: 43.2px
+      text-align: left
+      color: $red
+      span 
+        font-weight: 400
+    &__info 
+      margin-top: 58px
+      &-item 
+        width: 746px
+        padding: 10px 0
+        border-bottom: 1px dashed $white 
+        &:first-child 
+          border-top: 1px dashed $white
+      p, span 
+        font-family: "Montserrat"
+        font-size: 24px
+        font-weight: 400
+        line-height: 33.6px
+        letter-spacing: -0.02em
+        text-align: left
+        color: $white
+
+  .menu 
+    padding-bottom: 275px 
+    &__title
+      margin: 0 auto
+      max-width: 1336px 
+    &__title, 
+    &__title>span
+      font-size: 36px
+      font-weight: 700
+      line-height: 43.2px
+      text-align: left
+      color: $red
+      span 
+        font-weight: 400
+    &__img 
+      &-line
+        display: block
+        position: absolute
+        left: 0
+        bottom: 0
+        width: 100%
+    &__swiper 
+      margin-top: 70px
+      height: 336px
+      cursor: grab
+      .slide 
+        position: relative
+        padding-top: 129px
+        padding-left: 62px
+        @include noSelect
+        &__img 
+          position: absolute
+          left: 0
+          top: 0
+        &__text
+          display: flex
+          align-items: flex-end
+          justify-content: flex-start
+          position: relative
+          &-left
+            flex: 0 0 246px
+          &-right 
+            flex: 0 0 201px
+          &-pretitle 
+            font-family: "Montserrat"
+            font-size: 14px
+            font-weight: 600
+            line-height: 21px
+            letter-spacing: -0.02em
+            text-align: left
+            color: $white
+          &-title 
+            b, span
+              font-size: 42px
+              line-height: 50.4px
+              letter-spacing: 0.02em
+              text-align: left
+              color: $white
+            b
+              font-weight: 700
+            span 
+              font-weight: 400
+          &-subtitle
+            b, span 
+              font-family: "Montserrat"
+              font-size: 12px
+              color: $white
+              line-height: 18px
+              letter-spacing: -0.02em
+              text-align: left
+            b 
+              font-weight: 600
+            span 
+              font-weight: 400
+
+  .booking       
+    .section__content
+      padding-top: 135px
+      padding-bottom: 140px
+      padding-right: 207px
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+    &__title
+      width: 600px 
+    &__title 
+    &__title, 
+    &__title>span
+      font-size: 36px
+      font-weight: 700
+      line-height: 43.2px
+      text-align: left
+      color: $red
+      span 
+        font-weight: 400
+    &__img 
+      &-letter 
+        position: absolute
+        top: -53px
+        height: 1000px
+    &__contacts
+      margin-top: 83px
+      width: 600px
+      &-title 
+        font-size: 28px
+        font-weight: 700
+        line-height: 33.6px
+        letter-spacing: 0.02em
+        text-align: left
+        color: $red-pale
+      &-text 
+        *
+          font-family: "Montserrat"
+          color: $white
+        h4 
+          padding-top: 22px
+          font-size: 12px
+          font-weight: 600
+          line-height: 18px
+          letter-spacing: -0.02em
+          text-align: left
+        p 
+          padding-top: 9px
+          font-size: 20px
+          font-weight: 400
+          line-height: 30px
+          letter-spacing: -0.02em
+          text-align: left
+          &:last-child
+            text-decoration: underline
+
+.footer 
+  height: 311px
+  .section__content
+    padding-top: 32px
+    padding-bottom: 15px
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: unset
+  &__background
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    img 
+      display: block
+      object-fit: cover
+      width: 100%
+      height: 100%
+  &__social-media 
+    flex: 1 1 100%
+    display: flex
+    justify-content: flex-end
+    gap: 10px
+    height: 32px
+    img 
+      display: block
+      width: 32px
+      height: 32px
+  &__text
+    font-family: "Montserrat"
+    font-size: 14px
+    font-weight: 400
+    line-height: 20px
+    letter-spacing: -0.02em
+    text-align: left
+    color: $white
+    align-self: flex-end
+  &__logo 
+    align-self: flex-end
+    padding-bottom: 9px
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    gap: 17px
+    img 
+      display: block
+      width: 113px
+      height: 103px
+    span 
+      width: 236px
+      display: block
+      font-size: 11px
+      font-weight: 500
+      line-height: 15.23px
+      letter-spacing: 0.02em
+      text-align: center
+      color: $white
