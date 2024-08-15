@@ -1,19 +1,34 @@
 import Section from 'components/Section';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import slides from 'lib/swiperSlides';
+import deviceStore from 'store/deviceStore';
 import { useEffect, useState } from 'react';
+import slides from 'lib/swiperSlides';
 
 import Navigation from 'components/Navigation';
 
 import line from 'assets/menu-line.svg';
 
 const Menu = () => {
+  const initialSlidesNum = deviceStore.isMobile ? 1 : 2;
+
+  const [slidesPerView, setSlidesPerView] = useState(initialSlidesNum);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const updateWindowWidth = () => setWindowWidth(window.innerWidth);
+  const updateWindowWidth = () => {
+    deviceStore.checkDeviceState();
+    const slidesPerView = deviceStore.isDesktopState() ? 2 : 1;
+    setSlidesPerView(slidesPerView);
 
-  const calcSlidesOffset = () => (windowWidth - 1336) / 2 + 110 + 311;
+    setWindowWidth(window.innerWidth);
+  };
+
+  const calcSlidesOffset = () => {
+    const slideContentWidth = deviceStore.isDesktopState() ? 544 : 277;
+
+    return windowWidth / 2 - slideContentWidth / 2;
+  };
 
   useEffect(() => {
     window.addEventListener('resize', updateWindowWidth);
@@ -36,9 +51,10 @@ const Menu = () => {
         onActiveIndexChange={(data) => setActiveIndex(data.activeIndex)}
         initialSlide={activeIndex}
         touchReleaseOnEdges={true}
-        slidesPerView={2}
-        spaceBetween={274}
+        slidesPerView={slidesPerView}
+        spaceBetween={deviceStore.isDesktopState() ? 274 : 0}
         slidesOffsetBefore={calcSlidesOffset}
+        slidesOffsetAfter={calcSlidesOffset}
       >
         {slides.map((slide, index) => (
           <SwiperSlide key={index} className="slide">

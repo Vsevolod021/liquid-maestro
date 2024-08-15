@@ -1,6 +1,10 @@
 .input 
   display: block
   width: 600px
+  @media #{$tablet}
+    width: calc(100vw - 330px)
+  @media screen and (max-width: 700px)
+    width: calc(100vw - 104px)
   &__label
     padding: 10px 0 6px 0
     display: block
@@ -27,3 +31,4 @@
     border-bottom: 1px solid $white
     &::placeholder
       color: rgba($white, 0.15)  
+

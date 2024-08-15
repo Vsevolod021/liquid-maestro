@@ -12,7 +12,11 @@
     display: block
 .button-prev 
   left: calc((100% - 1400px) / 2 + 156px)
+  @media screen and (max-width: 1200px)
+    left: 52px 
   img 
     transform: rotate(180deg)
 .button-next
   right: calc((100% - 1400px) / 2 + 156px)
+  @media screen and (max-width: 1200px)
+    right: 52px 
