@@ -10,6 +10,8 @@
   cursor: pointer
   img 
     display: block
+  @media #{$mobile}
+    display: none
 .button-prev 
   left: calc((100% - 1400px) / 2 + 156px)
   @media screen and (max-width: 1200px)

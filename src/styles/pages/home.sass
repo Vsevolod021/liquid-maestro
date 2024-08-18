@@ -2,6 +2,8 @@
   background: $black
   .intro
     height: 874px
+    @media #{$mobile}
+      height: 844px
     .section__content 
       padding-top: 35px
     &__background
@@ -33,6 +35,9 @@
       &-logo 
         width: 117px
         height: 106px
+        @media #{$mobile}
+          width: 96px
+          height: 86px
       &-menu-burger
         width: 30px
         height: 16px
@@ -49,12 +54,21 @@
         line-height: 19.5px
         text-align: left
         color: $white
+        @media #{$mobile}
+          font-size: 15px
+          line-height: 18.29px
       &-title
         font-size: 102px
         font-weight: 700
         line-height: 106.59px
         text-align: left
         color: $white
+        @media #{$mobile}
+          font-size: 84px
+          line-height: 87.78px
+          font-weight: 600
+        @media screen and (max-width: 350px)
+          font-size: 74px
       &-subtitle
         margin-top: 24px
         font-size: 20px
@@ -63,12 +77,19 @@
         letter-spacing: 0.02em
         text-align: left
         color: $white
+        @media #{$mobile}
+          margin-top: 7px
+          font-size: 17px
+          line-height: 23.54px
+
     &__button 
       display: block
       position: absolute
       left: 50%
       bottom: 100px
       transform: translateX(-50%)
+      @media #{$mobile}
+        bottom: 155px
     &__img 
       @at-root .intro img 
         display: block
@@ -79,6 +100,8 @@
         @media #{$tablet}
           right: 52px
           left: unset
+        @media #{$mobile}
+          right: 39px
       &-line 
         top: 0
         left: 0
@@ -93,6 +116,8 @@
     .section__content
       padding-top: 345px
       padding-bottom: 204px
+      @media #{$mobile}
+        padding-top: 295px
     &__img
       @at-root .about img 
         display: block
@@ -102,10 +127,18 @@
         left: 0
         height: 821px
         width: 508px
+        @media #{$mobile}
+          height: auto
+          width: 100%
       &-cocktail 
         top: 78px
         left: 50%
         transform: translateX(-50%)
+        width: 260px
+        @media #{$mobile}
+          top: 82px
+          width: 208px
+          height: 312px
     &__text 
       padding: 0 188px
       position: relative
@@ -120,6 +153,9 @@
         color: $white
         u 
           text-decoration: underline
+        @media #{$mobile}
+          font-size: 28.9px
+          line-height: 39.89px
       &-additional
         margin-top: 55px
         font-family: "Montserrat"
@@ -129,6 +165,11 @@
         letter-spacing: -0.02em
         text-align: left
         color: $white
+        margin-top: 36px
+        @media #{$mobile}
+          font-size: 16px
+          line-height: 24px
+
 
   .hours 
     .section__content
@@ -139,6 +180,9 @@
         padding-left: 52px
       @media screen and (max-width: 700px)
         padding-bottom: 144px
+        padding-top: 91px
+      @media #{$mobile}
+        padding-left: 20px
     &__photos
       display: flex
       justify-content: space-between
@@ -156,6 +200,9 @@
         position: absolute
         top: 167px
         right: 0
+        height: 885px
+        @media #{$mobile}
+          height: 542px
     &__title, 
     &__title>span
       font-size: 36px
@@ -165,6 +212,10 @@
       color: $red
       span 
         font-weight: 400
+      @media #{$mobile}
+        font-size: 32px
+        line-height: 38.4px
+
     &__info 
       margin-top: 58px
       &-item 
@@ -183,7 +234,10 @@
         letter-spacing: -0.02em
         text-align: left
         color: $white
-
+        @media #{$mobile}
+          font-size: 22px
+          line-height: 30.8px
+          
   .menu 
     padding-bottom: 275px 
     @media #{$tablet}
@@ -192,6 +246,8 @@
       padding-left: 162px
       @media screen and (max-width: 1200px)
         padding-left: 52px
+      @media #{$mobile}
+        padding-left: 20px
     &__title
       margin: 0 auto
       max-width: 1336px 
@@ -204,6 +260,9 @@
       color: $red
       span 
         font-weight: 400
+      @media #{$mobile}
+        font-size: 32px
+        line-height: 38.4px
     &__img 
       &-line
         display: block
@@ -307,12 +366,16 @@
       @media screen and (max-width: 700px)
         padding-top: 67px
         padding-bottom: 70px
+      @media #{$mobile}
+        padding-right: 20px
     &__title
       width: 600px   
       @media #{$tablet}
         width: calc(100vw - 330px)
       @media screen and (max-width: 700px)
         width: calc(100vw - 104px)
+      @media #{$mobile}
+        width: calc(100vw - 40px)
     &__title 
     &__title, 
     &__title>span
@@ -323,6 +386,10 @@
       color: $red
       span 
         font-weight: 400
+      @media #{$mobile}
+        font-size: 32px
+        line-height: 38.4px
+
     &__img 
       &-letter 
         position: absolute
@@ -342,6 +409,8 @@
         width: calc(100vw - 330px)      
       @media screen and (max-width: 700px)
         width: calc(100vw - 104px)
+      @media #{$mobile}
+        width: calc(100vw - 40px)
       &-title 
         font-size: 28px
         font-weight: 700
@@ -349,6 +418,10 @@
         letter-spacing: 0.02em
         text-align: left
         color: $red-pale
+        @media #{$mobile}
+          font-size: 28px
+          line-height: 33.6px
+
       &-text 
         *
           font-family: "Montserrat"
@@ -379,6 +452,13 @@
     flex-wrap: wrap
     justify-content: space-between
     max-width: unset
+    @media #{$mobile}
+      padding-top: 18px
+      padding-bottom: 14px
+      flex-wrap: nowrap
+      flex-direction: column
+      align-items: center
+      gap: 25px
   &__background
     position: absolute
     top: 0
@@ -400,6 +480,8 @@
       display: block
       width: 32px
       height: 32px
+    @media #{$mobile}
+      flex: none 
   &__text
     font-family: "Montserrat"
     font-size: 14px
@@ -409,6 +491,11 @@
     text-align: left
     color: $white
     align-self: flex-end
+    @media #{$mobile}
+      order: 2
+      align-self: center
+      &:last-child
+        margin-top: -21px
   &__logo 
     align-self: flex-end
     padding-bottom: 9px
@@ -417,6 +504,9 @@
     align-items: center
     flex-direction: column
     gap: 17px
+    @media #{$mobile}
+      order: 1
+      align-self: center
     img 
       display: block
       width: 113px
